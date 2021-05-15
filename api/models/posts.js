@@ -8,9 +8,11 @@ class Post
         return this.readData();
     }
 
-    getSingleBlog() {
+    getSingleBlog(postId) {
         // get one post
-
+        const post = this.readData();
+        const foundPost = posts.find((post) => post.id == postId)
+        return foundPost;
     }
 
     add(newPost) {
